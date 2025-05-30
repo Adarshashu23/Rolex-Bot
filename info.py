@@ -17,11 +17,11 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
-PICS = (environ.get('PICS', 'https://telegra.ph/file/509c5901d46f2b747fe8c-3215c419bf713f8f43.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/23b4f2354568ad3b683fe-5c70edfb595ee07c4c.jpg')).split()
 
 
 # Admins & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6616794762').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6616794762 6216705387').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
@@ -88,10 +88,10 @@ PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '') # Public Channel Us
 
 
 # Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MrTechMovies_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/OTT_RELEASE_MOVIE')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/MrTechMovies_Group') # Support Chat Link Without https:// or @
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/MrTech_TG')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+xDE8yWOccxk3NDk1')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+4SooF1lv84s2Y2Fl')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+GPACtfc4iyQyZTA1') # Support Chat Link Without https:// or @
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/OTT_RELEASE_MOVIE')
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
