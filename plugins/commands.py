@@ -27,12 +27,13 @@ async def start(client, message):
     except:
         pass
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [[
-            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ', url=f'https://t.me/+xDE8yWOccxk3NDk1'),
-            InlineKeyboardButton('ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=GRP_LNK)
-        ],[
-            InlineKeyboardButton('ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/+xDE8yWOccxk3NDk1')
-        ]]
+        buttons = [
+                InlineKeyboardButton('🖥 𝙊𝙏𝙏 𝙈𝙤𝙫𝙞𝙚 𝙐𝙋𝘿𝘼𝙏𝙀𝙎  🖥', url=f'https://t.me/+pODlyGPLLp04YWFl')
+               ],[
+                InlineKeyboardButton('⚙ 𝙉𝙀𝙒 𝙈𝙊𝙑𝙄𝙀𝙎 ⚙', url=f'https://www.instagram.com/ottmovieupdat1?igsh=aHZqanZ1ZmoweDNk
+              ],[
+                InlineKeyboardButton('📤 𝙇𝘼𝙎𝙏𝙀𝙎𝙏 𝙐𝙋𝙇𝙊𝘼𝘿𝙀𝘿 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 📤', url="https://t.me/+3IX_sOZEXMZjMGM1"),
+        ]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
         await asyncio.sleep(2) # 😢 https://github.com/EvamariaTG/EvaMaria/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
@@ -46,25 +47,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         if PREMIUM_AND_REFERAL_MODE == True:
-            buttons = [[
-                InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-                InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
-            ],[
-                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/+GPACtfc4iyQyZTA1'),
-                InlineKeyboardButton('ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=f'https://t.me/+xDE8yWOccxk3NDk1')
-            ]]
-        else:
-            buttons = [[
-                InlineKeyboardButton('⤬ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-                InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-                InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
-            ],[
-                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/+4SooF1lv84s2Y2Fl'),
-                InlineKeyboardButton('ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ', url=f'https://t.me/+xDE8yWOccxk3NDk1')
-            ]]
+            buttons = [
+                InlineKeyboardButton('🖥 𝙊𝙏𝙏 𝙈𝙤𝙫𝙞𝙚 𝙐𝙋𝘿𝘼𝙏𝙀𝙎  🖥', url=f'https://t.me/+pODlyGPLLp04YWFl')
+               ],[
+                InlineKeyboardButton('⚙ 𝙉𝙀𝙒 𝙈𝙊𝙑𝙄𝙀𝙎 ⚙', url=f'https://www.instagram.com/ottmovieupdat1?igsh=aHZqanZ1ZmoweDNk
+              ],[
+                InlineKeyboardButton('📤 𝙇𝘼𝙎𝙏𝙀𝙎𝙏 𝙐𝙋𝙇𝙊𝘼𝘿𝙀𝘿 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 📤', url="https://t.me/+3IX_sOZEXMZjMGM1"),
+        ]
         if CLONE_MODE == True:
             buttons.append([InlineKeyboardButton('ᴄʀᴇᴀᴛᴇ ᴏᴡɴ ᴄʟᴏɴᴇ ʙᴏᴛ', callback_data='clone')])
         reply_markup = InlineKeyboardMarkup(buttons)
